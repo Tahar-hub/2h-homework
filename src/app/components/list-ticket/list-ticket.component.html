@@ -1,0 +1,14 @@
+<app-add-ticket></app-add-ticket>
+<br>
+<br>
+<h2>Tickets</h2>
+<mat-form-field class="field">
+    <mat-label>Description filter</mat-label>
+    <input matInput type="text" [(ngModel)]="descriptionFilter" (keyup)="filter()">
+</mat-form-field>
+
+<div class ="card" *ngFor="let ticket of filtredTickets" (click)="goToDetails(ticket.id)">
+    <mat-card>
+        Ticket: {{ ticket.id }}, {{ ticket.description }}
+    </mat-card>
+</div>

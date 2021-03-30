@@ -1,0 +1,22 @@
+<H2> Details ticket </H2>
+<div *ngIf="selectedTicket$ | async as selectedTicket">
+    <p> <strong> ID: </strong> {{selectedTicket.id}} </p>
+    <p> <strong> Description: </strong> {{selectedTicket.description}} </p>
+    <p> <strong> assigneeId: </strong> {{selectedTicket.assigneeId}} </p>
+    <p> <strong> completed: </strong> {{selectedTicket.completed}} </p>
+
+    <button mat-raised-button color="primary" class="button" (click)="assign(selectedTicket.id)">
+        assign To Victor
+    </button>
+    <br>
+    <br>
+    <button mat-raised-button color="primary" class="button" (click)="complete(selectedTicket.id)">
+        completed
+    </button>
+    <br>
+    <br>
+    <button mat-raised-button color="outline" class="button" (click)="back()">
+        back
+    </button>
+
+</div>

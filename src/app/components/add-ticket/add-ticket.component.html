@@ -1,0 +1,11 @@
+<div class="content">
+<H2>add ticket</H2>
+<mat-form-field class="field">
+    <mat-label>description New Ticket </mat-label>
+    <input matInput type="text" [(ngModel)]="descriptionNewTicket">
+</mat-form-field>
+
+<button mat-raised-button color="primary" class="button" (click)="createTicket()">
+    Add ticket
+</button>
+</div>
